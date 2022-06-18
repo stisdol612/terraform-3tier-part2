@@ -7,3 +7,4 @@ module "vpc" {
 module "compute" {
   source = "./modules/compute"
 }
+

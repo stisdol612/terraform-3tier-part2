@@ -4,9 +4,9 @@
 #   name               = "ALB"
 #   internal           = false
 #   load_balancer_type = "application"
-#   security_groups    = ["aws_security_group.alb_security_group.id"]
+#   security_groups    = ["module.networking.lb_security_group"]
 
-#   subnets = ["aws_subnet.public_subnet_az1.id", "aws_subnet.public_subnet_az2.id"]
+#   subnets = ["module.networking.public_subnet_az1", "module.networking.public_subnet_az2"]
 
 #   enable_deletion_protection = false
 

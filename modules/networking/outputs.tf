@@ -15,3 +15,11 @@ output "public_subnet_az1" {
 output "public_subnet_az2" {
   value = aws_subnet.public_subnet_az2.id
 }
+
+output "web_security_group" {
+  value = aws_security_group.webserver_security_group.id
+}
+
+output "lb_security_group" {
+  value = aws_security_group.alb_security_group.id
+}
