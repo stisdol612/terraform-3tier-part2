@@ -5,9 +5,6 @@ resource "aws_instance" "web_az1" {
   instance_type = var.instance_type
   vpc_security_group_ids = [var.web_security_group]
   subnet_id = var.public_subnet_az1
-    depends_on = [
-      var.public_subnet_az1
-    ]
 }
 
 resource "aws_instance" "web_az2" {
