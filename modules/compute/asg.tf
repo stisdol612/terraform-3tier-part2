@@ -6,10 +6,7 @@ resource "aws_launch_template" "web_launch_template" {
   image_id = var.image_id
   instance_type = var.instance_type
   key_name = var.key_name
-  vpc_security_group_ids = ["var.web_security_group"]
-    depends_on = [
-      var.web_security_group,
-    ]
+  vpc_security_group_ids = [var.web_security_group]
 
   user_data = file("apache.sh")
 }

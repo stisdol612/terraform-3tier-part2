@@ -71,7 +71,6 @@ resource "aws_security_group" "webserver_security_group" {
     from_port       = 80
     to_port         = 80
     protocol        = "tcp"
-    security_groups = ["${aws_security_group.alb_security_group.id}"]
   }
 
   ingress {
@@ -79,7 +78,6 @@ resource "aws_security_group" "webserver_security_group" {
     from_port       = 443
     to_port         = 443
     protocol        = "tcp"
-    security_groups = ["${aws_security_group.alb_security_group.id}"]
   }
 
   ingress {
@@ -87,7 +85,6 @@ resource "aws_security_group" "webserver_security_group" {
     from_port       = 22
     to_port         = 22
     protocol        = "tcp"
-    security_groups = ["${aws_security_group.ssh_security_group.id}"]
   }
 
   egress {
@@ -113,7 +110,6 @@ resource "aws_security_group" "database_security_group" {
     from_port       = 3306
     to_port         = 3306
     protocol        = "tcp"
-    security_groups = ["${aws_security_group.webserver_security_group.id}"]
   }
 
   egress {
