@@ -36,6 +36,6 @@ variable "web_security_group" {
   type = string
 }
 
-variable "lb_security_group" {
+variable "alb_security_group" {
   type = string
 }

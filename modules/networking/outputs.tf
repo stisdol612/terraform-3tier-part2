@@ -28,6 +28,6 @@ output "web_security_group" {
   value = aws_security_group.webserver_security_group.id
 }
 
-output "lb_security_group" {
+output "alb_security_group" {
   value = aws_security_group.alb_security_group.id
 }

@@ -13,6 +13,6 @@ module "compute" {
   private_app_subnet_az1 = "module.networking.private_app_subnet_az1"
   private_app_subnet_az2 = "module.networking.private_app_subnet_az2"
   web_security_group = "module.networking.web_security_group"
-  lb_security_group = "module.networking.lb_security_group"
+  alb_security_group = "module.networking.alb_security_group"
 }
 

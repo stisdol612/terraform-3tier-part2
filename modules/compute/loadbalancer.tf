@@ -4,7 +4,7 @@ resource "aws_lb" "application_load_balancer" {
   name               = "ALB"
   internal           = false
   load_balancer_type = "application"
-  security_groups    = ["var.lb_security_group"]
+  security_groups    = [var.alb_security_group]
 
   subnets = [var.public_subnet_az1, var.public_subnet_az2]
 
@@ -19,7 +19,7 @@ resource "aws_lb_target_group" "alb_tg" {
   target_type = "alb"
   port = 80
   protocol = "TCP"
-  vpc_id = var.vpc_id
+  vpc_id = "var.vpc_id"
 }
 
 resource "aws_lb_target_group_attachment" "lb_tg_attach1" {
