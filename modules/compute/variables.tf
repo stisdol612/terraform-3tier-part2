@@ -12,16 +12,30 @@ variable "key_name" {
   default = "week22"
 }
 
-variable "vpc_id" {}
+variable "vpc_id" {
+  type = string
+}
 
-variable "public_subnet_az1" {}
+variable "public_subnet_az1" {
+  type = string
+}
 
-variable "public_subnet_az2" {}
+variable "public_subnet_az2" {
+  type = string
+}
 
-variable "private_app_subnet_az1" {}
+variable "private_app_subnet_az1" {
+  type = string
+}
 
-variable "private_app_subnet_az2" {}
+variable "private_app_subnet_az2" {
+  type = string
+}
 
-variable "web_security_group" {}
+variable "web_security_group" {
+  type = string
+}
 
-variable "lb_security_group" {}
+variable "lb_security_group" {
+  type = string
+}
