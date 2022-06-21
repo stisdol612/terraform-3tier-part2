@@ -16,6 +16,14 @@ output "public_subnet_az2" {
   value = aws_subnet.public_subnet_az2.id
 }
 
+output "private_app_subnet_az1" {
+  value = aws_subnet.private_app_subnet_az1.id
+}
+
+output "private_app_subnet_az2" {
+  value = aws_subnet.private_app_subnet_az2.id
+}
+
 output "web_security_group" {
   value = aws_security_group.webserver_security_group.id
 }

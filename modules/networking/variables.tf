@@ -39,3 +39,31 @@ variable "ssh_location" {
   default = "0.0.0.0/0"
   type    = string
 }
+
+variable "vpc_id" {
+  type = string
+}
+
+variable "public_subnet_az1" {
+  type = string
+}
+
+variable "public_subnet_az2" {
+  type = string
+}
+
+variable "private_app_subnet_az1" {
+  type = string
+}
+
+variable "private_app_subnet_az2" {
+  type = string
+}
+
+variable "web_security_group" {
+  type = string
+}
+
+variable "lb_security_group" {
+  type = string
+}
