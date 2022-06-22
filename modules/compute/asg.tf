@@ -8,13 +8,13 @@ resource "aws_launch_template" "web_launch_template" {
   key_name = var.key_name
   vpc_security_group_ids = [var.web_security_group]
 
-  user_data = file("apache.sh")
+  user_data = "${filebase64("apache.sh")}"
 }
 
 resource "aws_autoscaling_group" "auto_scaling_group" {
   max_size = 5
   min_size = 2
-  desired_capacity = 3
+  desired_capacity = 2
   health_check_type = "EC2"
   health_check_grace_period = 300
   vpc_zone_identifier = [var.public_subnet_az1, var.public_subnet_az2]
