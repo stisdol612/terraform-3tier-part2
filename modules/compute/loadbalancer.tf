@@ -51,3 +51,5 @@ resource "aws_lb_target_group_attachment" "lb_tg_attach2" {
   target_id = aws_instance.web_az2.id
   port = 80
 }
+
+
