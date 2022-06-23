@@ -43,7 +43,7 @@ resource "aws_autoscaling_group" "auto_scaling_group_1" {
 resource "aws_autoscaling_group" "auto_scaling_group_2" {
   max_size                  = 5
   min_size                  = 2
-  desired_capacity          = 3
+  desired_capacity          = 4
   health_check_type         = "EC2"
   health_check_grace_period = 300
   vpc_zone_identifier       = [var.private_app_subnet_az1, var.private_app_subnet_az2]
