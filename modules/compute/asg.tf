@@ -11,7 +11,7 @@ resource "aws_launch_template" "web_launch_template" {
     name = aws_iam_instance_profile.ec2_profile.name
   }
 
-  user_data = filebase64("apache.sh")
+  user_data = "${base64encode(file("apache.sh"))}"
 }
 
 resource "aws_launch_template" "app_launch_template" {
@@ -24,7 +24,7 @@ resource "aws_launch_template" "app_launch_template" {
     name = aws_iam_instance_profile.ec2_profile.name
   }
 
-  user_data = filebase64("apache.sh")
+  user_data = "${base64encode(file("apache.sh"))}"
 }
 
 resource "aws_autoscaling_group" "auto_scaling_group_1" {
